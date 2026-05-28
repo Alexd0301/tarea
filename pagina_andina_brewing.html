@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Andina Brewing</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-color: #f7f1e8;
+      color: #2b2118;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(rgba(43, 33, 24, 0.75), rgba(43, 33, 24, 0.75)),
+        url("imagenes/andina_hero_montanas.png");
+      background-size: cover;
+      background-position: center;
+      min-height: 90vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      font-size: 4rem;
+      margin-bottom: 15px;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      max-width: 800px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background-color: #c77b30;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #9d5d20;
+    }
+
+    nav {
+      background-color: #2b2118;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #f2b66d;
+    }
+
+    section {
+      padding: 70px 10%;
+    }
+
+    .titulo {
+      text-align: center;
+      font-size: 2.4rem;
+      margin-bottom: 35px;
+      color: #5a3518;
+    }
+
+    .contenido {
+      max-width: 1000px;
+      margin: auto;
+      font-size: 1.05rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background-color: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: #7a471d;
+      margin-bottom: 10px;
+    }
+
+    .precio {
+      color: #c77b30;
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .oscuro {
+      background-color: #2b2118;
+      color: white;
+    }
+
+    .oscuro .titulo {
+      color: #f2b66d;
+    }
+
+    ul {
+      margin-left: 25px;
+      margin-top: 15px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .objetivos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 25px;
+    }
+
+    .objetivo {
+      background-color: #fff;
+      border-left: 6px solid #c77b30;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contacto {
+      text-align: center;
+      background-color: #c77b30;
+      color: white;
+    }
+
+    footer {
+      background-color: #1b140f;
+      color: white;
+      text-align: center;
+      padding: 25px;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+
+      nav a {
+        display: block;
+        margin: 8px 0;
+      }
+
+      section {
+        padding: 50px 6%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#empresa">Empresa</a>
+    <a href="#productos">Productos</a>
+    <a href="#clientes">Clientes</a>
+    <a href="#estrategia">Estrategia</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <header id="inicio">
+    <h1>Andina Brewing</h1>
+    <p>Cerveza artesanal inspirada en los sabores de la región andina de Colombia.</p>
+    <a href="#productos" class="btn">Conoce nuestros productos</a>
+  </header>
+
+  <section id="empresa">
+    <h2 class="titulo">Sobre la empresa</h2>
+    <div class="contenido">
+      <p>
+        Andina Brewing es una empresa dedicada a la producción y venta de cerveza artesanal.
+        Su objetivo principal es ofrecer un producto de buena calidad que represente los sabores
+        de la región andina de Colombia y que pueda competir dentro del mercado de bebidas.
+      </p>
+      <br />
+      <p>
+        La empresa está constituida como una Sociedad por Acciones Simplificada, S.A.S.,
+        y pertenece al sector de bebidas, específicamente al mercado de la cerveza artesanal.
+      </p>
+    </div>
+  </section>
+
+  <section id="productos" class="oscuro">
+    <h2 class="titulo">Productos</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="andina_selva.png" alt="Cerveza Lager Andina Brewing" />
+        <h3>Cerveza Lager</h3>
+        <p>Cerveza rubia artesanal, suave y refrescante.</p>
+        <p class="precio">$8.000</p>
+      </div>
+      <div class="card">
+        <img src="andina_ingredientes.png" alt="Cerveza Amber Ale Andina Brewing" />
+        <h3>Amber Ale</h3>
+        <p>Cerveza roja con sabor equilibrado y aroma especial.</p>
+        <p class="precio">$9.000</p>
+      </div>
+      <div class="card">
+        <img src="andina_bar.png" alt="Cerveza Stout Andina Brewing" />
+        <h3>Stout</h3>
+        <p>Cerveza negra con cuerpo, sabor intenso y notas tostadas.</p>
+        <p class="precio">$10.000</p>
+      </div>
+      <div class="card">
+        <img src="andina_lata_mano.png" alt="Cerveza IPA Andina Brewing" />
+        <h3>IPA</h3>
+        <p>Cerveza artesanal con mayor aroma y amargor característico.</p>
+        <p class="precio">$11.000</p>
+      </div>
+      <div class="card">
+        <img src="andina_hero_montanas.png" alt="Six pack de cervezas Andina Brewing" />
+        <h3>Six Pack</h3>
+        <p>Combo de cervezas artesanales para compartir.</p>
+        <p class="precio">$50.000</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="clientes">
+    <h2 class="titulo">Clientes principales</h2>
+    <div class="contenido">
+      <p>
+        Los principales clientes de Andina Brewing están relacionados con el sector gastronómico,
+        turístico y de entretenimiento.
+      </p>
+      <ul>
+        <li>Bares y pubs</li>
+        <li>Restaurantes</li>
+        <li>Tiendas de bebidas</li>
+        <li>Supermercados</li>
+        <li>Hoteles</li>
+        <li>Personas que consumen cerveza artesanal</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="oscuro">
+    <h2 class="titulo">Problema comercial</h2>
+    <div class="contenido">
+      <p>
+        Aunque la empresa cuenta con un buen producto, enfrenta dificultades para aumentar sus ventas
+        debido a la fuerte competencia de grandes marcas, el bajo reconocimiento de la marca, los costos
+        de transporte y la poca presencia en supermercados o tiendas grandes.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="titulo">Objetivos</h2>
+    <div class="objetivos">
+      <div class="objetivo">
+        <h3>Objetivo general</h3>
+        <p>Lograr que Andina Brewing sea reconocida en el mercado de cerveza artesanal.</p>
+      </div>
+      <div class="objetivo">
+        <h3>Aumentar ventas</h3>
+        <p>Incrementar las ventas en un 30% durante el próximo año.</p>
+      </div>
+      <div class="objetivo">
+        <h3>Nuevos aliados</h3>
+        <p>Vender en al menos 20 bares y restaurantes.</p>
+      </div>
+      <div class="objetivo">
+        <h3>Expansión</h3>
+        <p>Llevar los productos a nuevas ciudades como Bogotá, Medellín y Cali.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="estrategia" class="oscuro">
+    <h2 class="titulo">Estrategia comercial</h2>
+    <div class="contenido">
+      <p>
+        Para mejorar su posicionamiento, Andina Brewing implementará estrategias comerciales enfocadas
+        en alianzas, promoción digital, participación en eventos y fidelización de clientes.
+      </p>
+      <ul>
+        <li>Alianzas con bares, restaurantes y pubs.</li>
+        <li>Publicidad en redes sociales y medios digitales.</li>
+        <li>Participación en ferias gastronómicas y eventos.</li>
+        <li>Degustaciones gratuitas para clientes potenciales.</li>
+        <li>Descuentos por volumen y promociones exclusivas.</li>
+        <li>Venta directa, tiendas especializadas, domicilios y marketplaces.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="titulo">Prospección de ventas</h2>
+    <div class="contenido">
+      <p>
+        La empresa realizará una base de datos con clientes potenciales como bares, restaurantes,
+        pubs, tiendas de licores y hoteles. El equipo comercial hará visitas presenciales, llamadas,
+        mensajes por redes sociales y correos electrónicos para presentar el portafolio de productos.
+      </p>
+      <br />
+      <p>
+        Después del primer contacto se hará seguimiento para resolver dudas, negociar condiciones,
+        cerrar ventas y evaluar resultados según el número de clientes nuevos y el volumen de ventas.
+      </p>
+    </div>
+  </section>
+
+  <section id="contacto" class="contacto">
+    <h2 class="titulo" style="color:white;">Contacto</h2>
+    <p>Andina Brewing - Cerveza artesanal colombiana</p>
+    <p>Correo: contacto@andinabrewing.com</p>
+    <p>Instagram: @andinabrewing</p>
+  </section>
+
+  <footer>
+    <p>© 2026 Andina Brewing | Proyecto académico - Universidad Santo Tomás</p>
+  </footer>
+</body>
+</html>
